@@ -9,6 +9,7 @@
     </title>
 
     <!--========== Swiper CSS ==========-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
     <!--========== Main style sheet ==========-->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -23,8 +24,16 @@
   </head>
   <body>
     <!--========== Customized cursor ==========-->
+    <div class="cursor">
+      <div class="cursor-dot"></div>
+      <div class="cursor-circle"></div>
+    </div>
 
     <!--========== To top button with scroll indicator bar ==========-->
+    <div class="to-top-btn">
+      <a href="#home"><span>To Top</span></a>
+      <div class="scroll-indicator-bar"></div>
+    </div>
 
     <!--========== Header ==========-->
     <header class="rega-header">
@@ -51,7 +60,7 @@
 
     <!--========== Bottom navigation menu ==========-->
 
-    <!-- <div class="bottom-nav-container">
+    <div class="bottom-nav-container">
       <div class="bottom-nav">
         <div class="bottom-nav-inner">
           <i class="ri-arrow-left-down-line menu-hide-btn"></i>
@@ -71,7 +80,7 @@
 
             <li class="menu-item">
               <a href="#resume">
-                <i class="ri-user-line"></i>
+                <i class="ri-quote-text"></i>
                 <span>Resume</span>
               </a>
             </li>
@@ -104,10 +113,11 @@
         <div class="bar-01"></div>
         <div class="bar-02"></div>
       </div>
-    </div> -->
+    </div>
 
     <!--========== Home ==========-->
-    <!-- <section class="rega-section nav-menu-section" id="home">
+
+    <section class="rega-section nav-menu-section" id="home">
       <div class="rega-container home-container">
         <div class="rega-wrapper">
           <div class="home-social">
@@ -162,11 +172,11 @@
           </a>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!--========== About Me ==========-->
 
-    <!-- <section class="rega-section nav-menu-section" id="about">
+    <section class="rega-section nav-menu-section" id="about">
       <div class="rega-container rega-sub-container">
         <div class="rega-wrapper">
           <div class="section-title about-title">
@@ -218,11 +228,11 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!--========== My Resume ==========-->
 
-    <!-- <section class="rega-section nav-menu-section" id="Resume">
+    <section class="rega-section nav-menu-section" id="resume">
       <div class="rega-container rega-sub-container">
         <div class="rega-wrapper">
           <div class="section-title">
@@ -426,22 +436,22 @@
               </div>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
-    </section> -->
+    </section>
 
     <!--========== Services ==========-->
-    <div class="rega-section nav-menu-section" id="service">
+
+    <section class="rega-section nav-menu-section" id="services">
       <div class="rega-container rega-sub-container">
         <div class="rega-wrapper">
           <div class="section-title">
             <h3>Services</h3>
             <p>What I Provide</p>
           </div>
-          <!-- section-container -->
+
           <div class="section-content">
             <div class="service-container">
-              <!-- card-with-modal -->
               <div class="card-with-modal">
                 <div class="service-card">
                   <div class="service-info">
@@ -605,9 +615,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!--========== Portfolio ==========-->
+    <!-- ========== Portfolio ========== -->
 
     <section class="rega-section nav-menu-section" id="portfolio">
       <div class="rega-container rega-sub-container">
@@ -617,15 +627,15 @@
             <p>My Recent Works</p>
           </div>
           <div class="portfolio-tabs">
-            <a class="tab-btn active">All</a>
-            <a class="tab-btn">Web Design</a>
-            <a class="tab-btn">Graphic Design</a>
-            <a class="tab-btn">UX/UI Design</a>
-            <a class="tab-btn">Photoshop</a>
+            <a class="tab-btn active" data-filter="all">All</a>
+            <a class="tab-btn" data-filter="web-design">Web Design</a>
+            <a class="tab-btn" data-filter="ui-design">UX/UI Design</a>
+            <a class="tab-btn" data-filter="photoshop">Photoshop</a>
+            <a class="tab-btn" data-filter="templates">Templates</a>
           </div>
           <div class="section-content">
             <div class="portfolio-container">
-              <div class="card-with-modal">
+              <div class="card-with-modal web-design">
                 <div class="portfolio-card">
                   <div class="card-img">
                     <img
@@ -637,120 +647,513 @@
                     <span>Web Design</span>
                     <h4>Dinamic</h4>
                     <i class="ri-arrow-right-up-line card-btn"></i>
+                  </div>
+                </div>
+
+                <div class="portfolio-modal-backdrop">
+                  <div class="portfolio-modal">
+                    <a href="" class="modal-close-btn">
+                      <i class="ri-close-line"></i>
+                    </a>
+                    <div class="modal-content">
+                      <div class="modal-img">
+                        <img
+                          src="assets/images/portfolio images/portfolio-img-01.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h4 class="modal-title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci, delectus!
+                      </h4>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="card-with-modal">
+              <div class="card-with-modal ui-design">
                 <div class="portfolio-card">
                   <div class="card-img">
                     <img
-                      src="assets/images/portfolio images/portfolio-img-01.jpg"
+                      src="assets/images/portfolio images/portfolio-img-02.jpg"
                       alt=""
                     />
                   </div>
                   <div class="card-info">
-                    <span>Web Design</span>
-                    <h4>Dinamic</h4>
+                    <span>UI Design</span>
+                    <h4>Submarine</h4>
                     <i class="ri-arrow-right-up-line card-btn"></i>
+                  </div>
+                </div>
+
+                <div class="portfolio-modal-backdrop">
+                  <div class="portfolio-modal">
+                    <a href="" class="modal-close-btn">
+                      <i class="ri-close-line"></i>
+                    </a>
+                    <div class="modal-content">
+                      <div class="modal-img">
+                        <img
+                          src="assets/images/portfolio images/portfolio-img-02.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h4 class="modal-title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci, delectus!
+                      </h4>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="card-with-modal">
+              <div class="card-with-modal templates">
                 <div class="portfolio-card">
                   <div class="card-img">
                     <img
-                      src="assets/images/portfolio images/portfolio-img-01.jpg"
+                      src="assets/images/portfolio images/portfolio-img-03.jpg"
                       alt=""
                     />
                   </div>
                   <div class="card-info">
-                    <span>Web Design</span>
-                    <h4>Dinamic</h4>
+                    <span>Templates</span>
+                    <h4>Seven Studio</h4>
                     <i class="ri-arrow-right-up-line card-btn"></i>
+                  </div>
+                </div>
+
+                <div class="portfolio-modal-backdrop">
+                  <div class="portfolio-modal">
+                    <a href="" class="modal-close-btn">
+                      <i class="ri-close-line"></i>
+                    </a>
+                    <div class="modal-content">
+                      <div class="modal-img">
+                        <img
+                          src="assets/images/portfolio images/portfolio-img-03.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h4 class="modal-title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci, delectus!
+                      </h4>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="card-with-modal">
+              <div class="card-with-modal photoshop">
                 <div class="portfolio-card">
                   <div class="card-img">
                     <img
-                      src="assets/images/portfolio images/portfolio-img-01.jpg"
+                      src="assets/images/portfolio images/portfolio-img-04.jpg"
                       alt=""
                     />
                   </div>
                   <div class="card-info">
-                    <span>Web Design</span>
-                    <h4>Dinamic</h4>
+                    <span>Photoshop</span>
+                    <h4>Raven Studio</h4>
                     <i class="ri-arrow-right-up-line card-btn"></i>
                   </div>
                 </div>
+
+                <div class="portfolio-modal-backdrop">
+                  <div class="portfolio-modal">
+                    <a href="" class="modal-close-btn">
+                      <i class="ri-close-line"></i>
+                    </a>
+                    <div class="modal-content">
+                      <div class="modal-img">
+                        <img
+                          src="assets/images/portfolio images/portfolio-img-04.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h4 class="modal-title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci, delectus!
+                      </h4>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="card-with-modal">
+              <div class="card-with-modal web-design">
                 <div class="portfolio-card">
                   <div class="card-img">
                     <img
-                      src="assets/images/portfolio images/portfolio-img-01.jpg"
+                      src="assets/images/portfolio images/portfolio-img-05.jpg"
                       alt=""
                     />
                   </div>
                   <div class="card-info">
                     <span>Web Design</span>
-                    <h4>Dinamic</h4>
+                    <h4>Pro Studio</h4>
                     <i class="ri-arrow-right-up-line card-btn"></i>
+                  </div>
+                </div>
+
+                <div class="portfolio-modal-backdrop">
+                  <div class="portfolio-modal">
+                    <a href="" class="modal-close-btn">
+                      <i class="ri-close-line"></i>
+                    </a>
+                    <div class="modal-content">
+                      <div class="modal-img">
+                        <img
+                          src="assets/images/portfolio images/portfolio-img-05.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h4 class="modal-title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci, delectus!
+                      </h4>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="card-with-modal">
+              <div class="card-with-modal templates">
                 <div class="portfolio-card">
                   <div class="card-img">
                     <img
-                      src="assets/images/portfolio images/portfolio-img-01.jpg"
+                      src="assets/images/portfolio images/portfolio-img-06.jpg"
                       alt=""
                     />
                   </div>
                   <div class="card-info">
-                    <span>Web Design</span>
-                    <h4>Dinamic</h4>
+                    <span>Templates</span>
+                    <h4>Design One</h4>
                     <i class="ri-arrow-right-up-line card-btn"></i>
+                  </div>
+                </div>
+
+                <div class="portfolio-modal-backdrop">
+                  <div class="portfolio-modal">
+                    <a href="" class="modal-close-btn">
+                      <i class="ri-close-line"></i>
+                    </a>
+                    <div class="modal-content">
+                      <div class="modal-img">
+                        <img
+                          src="assets/images/portfolio images/portfolio-img-06.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h4 class="modal-title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci, delectus!
+                      </h4>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="card-with-modal">
+              <div class="card-with-modal ui-design">
                 <div class="portfolio-card">
                   <div class="card-img">
                     <img
-                      src="assets/images/portfolio images/portfolio-img-01.jpg"
+                      src="assets/images/portfolio images/portfolio-img-07.jpg"
                       alt=""
                     />
                   </div>
                   <div class="card-info">
-                    <span>Web Design</span>
-                    <h4>Dinamic</h4>
+                    <span>UI/UX Design</span>
+                    <h4>Color Seven</h4>
                     <i class="ri-arrow-right-up-line card-btn"></i>
+                  </div>
+                </div>
+
+                <div class="portfolio-modal-backdrop">
+                  <div class="portfolio-modal">
+                    <a href="" class="modal-close-btn">
+                      <i class="ri-close-line"></i>
+                    </a>
+                    <div class="modal-content">
+                      <div class="modal-img">
+                        <img
+                          src="assets/images/portfolio images/portfolio-img-07.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h4 class="modal-title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci, delectus!
+                      </h4>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="card-with-modal">
+              <div class="card-with-modal web-design">
                 <div class="portfolio-card">
                   <div class="card-img">
                     <img
-                      src="assets/images/portfolio images/portfolio-img-01.jpg"
+                      src="assets/images/portfolio images/portfolio-img-08.jpg"
                       alt=""
                     />
                   </div>
                   <div class="card-info">
                     <span>Web Design</span>
-                    <h4>Dinamic</h4>
+                    <h4>Grid Studio</h4>
                     <i class="ri-arrow-right-up-line card-btn"></i>
                   </div>
                 </div>
+
+                <div class="portfolio-modal-backdrop">
+                  <div class="portfolio-modal">
+                    <a href="" class="modal-close-btn">
+                      <i class="ri-close-line"></i>
+                    </a>
+                    <div class="modal-content">
+                      <div class="modal-img">
+                        <img
+                          src="assets/images/portfolio images/portfolio-img-08.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h4 class="modal-title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci, delectus!
+                      </h4>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                      <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ad sapiente quos dolorem dolor quam vitae,
+                        voluptatem ullam ab officiis, perspiciatis deserunt
+                        aliquam quisquam dolorum deleniti qui sunt a?
+                        Perspiciatis, veritatis earum error aperiam ut non unde
+                        cupiditate sequi veniam corporis totam blanditiis
+                        perferendis repellat. Incidunt reiciendis quas nisi
+                        neque provident.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="section-title">
+            <h3>Awesome Clients</h3>
+            <p>Words From My Clients</p>
+          </div>
+          <div class="section-content">
+            <div class="swiper rega-client-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="client-img">
+                    <img
+                      src="assets/images/client images/client-img-01.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="client-details">
+                    <h3>Aria Collins</h3>
+                    <span>Marketing Manager</span>
+                    <p>
+                      Hi, I’m Aria Collins and I am designer & developer who
+                      dream making the world better place by products. I am also
+                      very active for international clients.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="client-img">
+                    <img
+                      src="assets/images/client images/client-img-02.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="client-details">
+                    <h3>Aria Collins</h3>
+                    <span>Marketing Manager</span>
+                    <p>
+                      Hi, I’m Aria Collins and I am designer & developer who
+                      dream making the world better place by products. I am also
+                      very active for international clients.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="client-img">
+                    <img
+                      src="assets/images/client images/client-img-03.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="client-details">
+                    <h3>Aria Collins</h3>
+                    <span>Marketing Manager</span>
+                    <p>
+                      Hi, I’m Aria Collins and I am designer & developer who
+                      dream making the world better place by products. I am also
+                      very active for international clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next">
+                <i class="ri-arrow-right-s-line"></i>
+              </div>
+              <div class="swiper-button-prev">
+                <i class="ri-arrow-left-s-line"></i>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -758,12 +1161,161 @@
     </section>
 
     <!--========== Contact Me ==========-->
+    <section class="rega-section nav-menu-section" id="contact">
+      <div class="rega-container rega-sub-container">
+        <div class="rega-wrapper">
+          <div class="section-title">
+            <h3>Contact Me</h3>
+            <p>Get In Touch</p>
+          </div>
+          <div class="section-content">
+            <div class="contact-container">
+              <div class="contact-info">
+                <h3>Contact Info</h3>
+                <ul class="contact-details">
+                  <li class="contact-item">
+                    <div class="contact-icon">
+                      <i class="ri-mail-send-fill"></i>
+                    </div>
+                    <div class="contact-method">
+                      <span>Email</span>
+                      <h4>info@sue.ayers.com</h4>
+                      <a href="mailto:someone@example.com" target="_blank">
+                        <span>Send <i class="ri-arrow-right-up-line"></i></span>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="contact-item">
+                    <div class="contact-icon">
+                      <i class="ri-messenger-fill"></i>
+                    </div>
+                    <div class="contact-method">
+                      <span>Messenger</span>
+                      <h4>Sue.Ayers-fb123</h4>
+                      <a
+                        href="http://m.me/Coding?text=Hello%20and%20Welcome"
+                        target="_blank"
+                      >
+                        <span>Send <i class="ri-arrow-right-up-line"></i></span>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="contact-item">
+                    <div class="contact-icon">
+                      <i class="ri-whatsapp-line"></i>
+                    </div>
+                    <div class="contact-method">
+                      <span>Whatsapp</span>
+                      <h4>+6282214449244</h4>
+                      <a
+                        href="https://wa.me/+6282214449244?text=Hello%20there!%20How%20can%20I%20help%20you?"
+                        target="_blank"
+                      >
+                        <span>Send <i class="ri-arrow-right-up-line"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+
+                <h3>Social Info</h3>
+                <ul class="contact-social-links">
+                  <li>
+                    <a href=""><i class="ri-facebook-fill"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="ri-twitter-x-fill"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="ri-linkedin-fill"></i></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="contact-form-body">
+                <h2>Let's work <span>together.</span></h2>
+                <p>
+                  Please fill out the form on this section to contact with me.
+                  Or call between 9:00 a.m. and 8:00 p.m. ET, Monday through
+                  Friday.
+                </p>
+
+                <form action="" method="POST" id="rega-contact-form">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      name="full-name"
+                      placeholder="Name *"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email *"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      name="subject"
+                      placeholder="Your Subject"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <textarea
+                      name="message"
+                      placeholder="Your Message *"
+                    ></textarea>
+                  </div>
+                  <div class="input-group send-message">
+                    <button
+                      class="rega-main-btn fill-btn submit-btn"
+                      name="submit"
+                      type="submit"
+                    >
+                      Send Message
+                    </button>
+                    <div class="contact-form-alert"></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!--========== Footer ==========-->
+    <footer class="rega-footer">
+      <div class="rega-container">
+        <div class="inner">
+          <div class="rega-logo">
+            <a href="#home"><span>Rega</span></a>
+          </div>
+
+          <ul class="footer-menu">
+            <li class="menu-item"><a href="#about">About</a></li>
+            <li class="menu-item"><a href="#resume">Resume</a></li>
+            <li class="menu-item"><a href="#services">Services</a></li>
+            <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
+          </ul>
+          <p class="copy-right">
+            © All rights reserved by <a href="">Coding Snow</a>
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <!--========== Swiper JS ==========-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
     <!--========== EmailJS ==========-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!--========== Main javascript ==========-->
     <script src="assets/js/main.js"></script>
