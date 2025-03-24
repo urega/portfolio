@@ -1,34 +1,34 @@
 /* =====================================================
    Resume section tabs and tab contents
 ===================================================== */
-// const resumeTabs = document.querySelector(".resume-tabs");
-// const resumePortfolioTabBtns = resumeTabs.querySelectorAll(".tab-btn");
-// const resumeTabContents = document.querySelectorAll(".resume-tab-content");
+const resumeTabs = document.querySelector(".resume-tabs");
+const resumePortfolioTabBtns = resumeTabs.querySelectorAll(".tab-btn");
+const resumeTabContents = document.querySelectorAll(".resume-tab-content");
 
-// let resumeTabNav = function (resumeTabClick) {
-//   resumeTabContents.forEach((resumeTabContent) => {
-//     resumeTabContent.style.display = "none";
-//     resumeTabContent.classList.remove("active");
-//   });
+let resumeTabNav = function (resumeTabClick) {
+  resumeTabContents.forEach((resumeTabContent) => {
+    resumeTabContent.style.display = "none";
+    resumeTabContent.classList.remove("active");
+  });
 
-//   resumePortfolioTabBtns.forEach((resumePortfolioTabBtn) => {
-//     resumePortfolioTabBtn.classList.remove("active");
-//   });
+  resumePortfolioTabBtns.forEach((resumePortfolioTabBtn) => {
+    resumePortfolioTabBtn.classList.remove("active");
+  });
 
-//   resumeTabContents[resumeTabClick].style.display = "flex";
+  resumeTabContents[resumeTabClick].style.display = "flex";
 
-//   setTimeout(() => {
-//     resumeTabContents[resumeTabClick].classList.add("active");
-//   }, 100);
+  setTimeout(() => {
+    resumeTabContents[resumeTabClick].classList.add("active");
+  }, 100);
 
-//   resumePortfolioTabBtns[resumeTabClick].classList.add("active");
-// };
+  resumePortfolioTabBtns[resumeTabClick].classList.add("active");
+};
 
-// resumePortfolioTabBtns.forEach((resumePortfolioTabBtn, i) => {
-//   resumePortfolioTabBtn.addEventListener("click", () => {
-//     resumeTabNav(i);
-//   });
-// });
+resumePortfolioTabBtns.forEach((resumePortfolioTabBtn, i) => {
+  resumePortfolioTabBtn.addEventListener("click", () => {
+    resumeTabNav(i);
+  });
+});
 /* =====================================================
    Service modal open/close function
 ===================================================== */
@@ -353,13 +353,81 @@ cursorHoverLinks.forEach((cursorHoverLink) => {
 ===================================================== */
 
 // Change theme and save current theme on click the theme button.
+const themeBtn = document.querySelector(".theme-btn");
+// change theme icon and theme on click theme button
+themeBtn.addEventListener("click", () => {
+  themeBtn.classList.toggle("active-sun-icon");
+  document.body.classList.toggle("light-theme");
 
+  // save theme icon and theme on click theme button
+  const getCurrentIcon = themeBtn.classList.contains("active-sun-icon")
+    ? "sun"
+    : "moon";
+  const getCurrentTheme = document.body.classList.contains("light-theme")
+    ? "light"
+    : "dark";
+  localStorage.setItem("rega-saved-icon", getCurrentIcon);
+  localStorage.setItem("rega-saved-theme", getCurrentTheme);
+});
 // Get saved theme icon and theme on document loaded.
+const savedIcon = localStorage.getItem("rega-saved-icon");
+const savedTheme = localStorage.getItem("rega-saved-theme");
+
+document.addEventListener("DOMContentLoaded", () => {
+  themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("active-sun-icon");
+  document.body.classList[savedTheme === "light" ? "add" : "remove"](
+    "light-theme"
+  );
+});
 
 /* =====================================================
    ScrollReveal JS animations
 ===================================================== */
 
 // Common reveal options to create reveal animations.
+ScrollReveal({ reset: true, distance: "60px", duration: 2500, delay: 400 });
 
 // Target elements and specify options to create reveal animations.
+ScrollReveal().reveal(".avatar-img", { delay: 100, origin: "top" });
+ScrollReveal().reveal(".avatar-info", { delay: 200, origin: "top" });
+ScrollReveal().reveal(".home-social, .home-scroll-btn, .copy-right", {
+  delay: 500,
+  origin: "bottom",
+});
+ScrollReveal().reveal(".about-img", {
+  delay: 600,
+  origin: "bottom",
+});
+ScrollReveal().reveal(".about-info, .rega-footer, .rega-logo", {
+  delay: 200,
+  origin: "bottom",
+});
+ScrollReveal().reveal(
+  ".pro-card, .about-buttons .rega-main-btn, .resume-tabs, .tab-btn, .portfolio-tabs, .tab-btn",
+  {
+    delay: 400,
+    origin: "right",
+    interval: 200,
+  }
+);
+ScrollReveal().reveal("#resume", {
+  delay: 600,
+  origin: "bottom",
+});
+ScrollReveal().reveal(
+  ".service-card, .portfolio-card, .contact-item, .contact-social-links li, .footer-menu, ",
+  {
+    delay: 200,
+    origin: "bottom",
+    interval: 300,
+  }
+);
+ScrollReveal().reveal(".rega-client-swiper, .contact-form-body", {
+  delay: 600,
+  origin: "right",
+});
+ScrollReveal().reveal(".contact-info h3", {
+  delay: 100,
+  origin: "bottom",
+  interval: 300,
+});
